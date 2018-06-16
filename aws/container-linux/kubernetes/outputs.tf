@@ -5,6 +5,11 @@ output "ingress_dns_name" {
   description = "DNS name of the network load balancer for distributing traffic to Ingress controllers"
 }
 
+output "ingress_zone_id" {
+  value       = "${module.workers.ingress_zone_id}"
+  description = "DNS zone of the network load balancer for distributing traffic to Ingress controllers"
+}
+
 # Outputs for worker pools
 
 output "vpc_id" {
