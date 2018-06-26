@@ -6,7 +6,7 @@ output "ingress_dns_name" {
 }
 
 output "ingress_zone_id" {
-  value       = "${module.workers.ingress_zone_id}"
+  value       = "${aws_lb.nlb.zone_id}"
   description = "DNS zone of the network load balancer for distributing traffic to Ingress controllers"
 }
 
